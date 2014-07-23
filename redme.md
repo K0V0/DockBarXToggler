@@ -20,15 +20,19 @@ Installation
 
 Just unpack downloaded archive into (create folder(s) if not exists):
 
-```/home/YOURuserNAME/.dockbarx/applets```
+`/home/YOURuserNAME/.dockbarx/applets`
+
 or
-```/usr/share/dockbarx/applets```
+
+`/usr/share/dockbarx/applets`
 
 then rerun dockbarx (alt+F2 -> run dialog):
 
-```killall dockx```
+`killall dockx`
+
 then
-```dockx```
+
+`dockx`
 
 applet should appear at the 2nd tab "dock applets" in right column. Just add it to left.
 
