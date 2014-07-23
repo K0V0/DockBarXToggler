@@ -13,7 +13,7 @@ Current version of DockBarX can run in 5 modes of behavior:
   - dodge active window: same as dodge window, plus will hide only when maximized window is active. Cons: Some windows does not reports its state, this feature is working mostly randomly.
   - always autohide: self explanatory. Cons: extra time to take some action, mouse out causes to hide panel immediatelly. When drunk and mouse set to 2000 dpi, it's better to forget that icons and use keyboard shortcuts. Due to zero delay of mouse out I find this mode most unsuitable for use, specially on old tablet notebooks (the IBM or HP ones with stylus and pressure sensitivity, not touch) 
 
-This applet gives you more control over your dock. It has only one function: toggling between first four modes (panel, standart, dodge windows, dodge active window) and last one (always autohide). If "autohide" is your default mode, then "standart" mode is used for toggling.
+This applet gives you more control over your dock. It has only one function: toggling between first four modes (panel, standart, dodge windows, dodge active window) and last one (always autohide). If "autohide" is your default mode, then "standart" mode is used for toggling. 
 
 Installation
 ------------
@@ -33,6 +33,10 @@ then rerun dockbarx (alt+F2 -> run dialog):
 then
 
 `dockx`
+
+if you want to have notifications when switching then make sure you have notify-osd installed
+
+`apt-get install notify-osd`
 
 applet should appear at the 2nd tab "dock applets" in right column. Just add it to left.
 

@@ -10,10 +10,7 @@ from dockbarx.applets import DockXApplet
 GCONF_MY_DIR = '/apps/dockbarx/dock/'
 GCONF_VALUE_NAME = 'behavior'
 GCONF_HIDDEN_VAL = 'always autohide'
-GCONF_PANEL_VAL = 'panel'
 GCONF_NORMAL_VAL = 'standard'
-GCONF_DODGE_VAL = 'dodge windows'
-GCONF_DODGE_ACTIVE_VAL = 'dodge active window'
 BUBBLE_HIDE = '\'DockBarX autohide ON\' \'Dock will be shown only on mouse hover\''
 BUBBLE_SHOW = '\'DockBarX always visible\' \'Use this applet to toggle it into autohide mode again\''
 BUBBLE_ICON = '/usr/share/icons/hicolor/128x128/apps/dockbarx.png'
@@ -36,10 +33,10 @@ class KovoApplet(DockXApplet):
 
     def get_state(self):
         val = gclient.get(GCONF_MY_DIR+GCONF_VALUE_NAME).get_string()
-        if val == GCONF_NORMAL_VAL or val == GCONF_PANEL_VAL or val == GCONF_DODGE_VAL or val == GCONF_DODGE_ACTIVE_VAL:
-            return val
-        elif val == GCONF_HIDDEN_VAL:
+        if val == GCONF_HIDDEN_VAL:
             return 0
+        else:
+            return val
 
     def render_ikon(self, stav):
         if stav == 0:
