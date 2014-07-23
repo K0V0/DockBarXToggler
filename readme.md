@@ -15,6 +15,11 @@ Current version of DockBarX can run in 5 modes of behavior:
 
 This applet gives you more control over your dock. It has only one function: toggling between first four modes (panel, standart, dodge windows, dodge active window) and last one (always autohide). If "autohide" is your default mode, then "standart" mode is used for toggling. 
 
+Download
+--------
+
+[v0.1.1](https://github.com/K0V0/DockBarXToggler/archive/v0.1.1.zip)
+
 Installation
 ------------
 
