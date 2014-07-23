@@ -1,0 +1,6 @@
+@dbx applet
+name=VisibilityToggler
+exec=toggler.py
+
+@description
+Applet that toggles Autohide of panel On/Off. 
