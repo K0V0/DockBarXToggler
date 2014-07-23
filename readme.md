@@ -18,7 +18,7 @@ This applet gives you more control over your dock. It has only one function: tog
 Download
 --------
 
-[v0.1.1](https://github.com/K0V0/DockBarXToggler/archive/v0.1.1.zip)
+[https://github.com/K0V0/DockBarXToggler/archive/v0.1.1.zip](https://github.com/K0V0/DockBarXToggler/archive/v0.1.1.zip)
 
 Installation
 ------------
