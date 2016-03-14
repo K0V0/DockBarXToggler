@@ -23,12 +23,12 @@ class KovoApplet(DockXApplet):
     def __init__(self, dbx_dict):
         DockXApplet.__init__(self, dbx_dict)
         widget_size = self.get_size()
-        state = self.get_state()
+        self.original_state = self.get_state()
         self.connect("clicked", self.on_clicked)
         self.ikon = gtk.Image()
         self.visible_image = self.prepare_pixbuf('toggler-gfx/visible.png', widget_size)
         self.novisible_image = self.prepare_pixbuf('toggler-gfx/novisible.png', widget_size)
-        self.render_ikon(state)
+        self.render_ikon(self.original_state)
         self.show()
 
     def get_state(self):
@@ -56,7 +56,7 @@ class KovoApplet(DockXApplet):
                 next_val = GCONF_HIDDEN_VAL
                 alert = BUBBLE_HIDE
             else: 
-                next_val = GCONF_NORMAL_VAL if prev_val == "" else prev_val 
+                next_val = self.original_state if prev_val == "" else prev_val 
                 alert = BUBBLE_SHOW
             self.render_ikon(0 if next_val == GCONF_HIDDEN_VAL else 1)
             os.system("notify-send " + alert + " -i " + BUBBLE_ICON)
