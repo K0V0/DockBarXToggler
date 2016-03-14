@@ -24,6 +24,7 @@ class KovoApplet(DockXApplet):
         DockXApplet.__init__(self, dbx_dict)
         widget_size = self.get_size()
         self.original_state = self.get_state()
+        self.original_state = GCONF_NORMAL_VAL if self.original_state == 0
         self.connect("clicked", self.on_clicked)
         self.ikon = gtk.Image()
         self.visible_image = self.prepare_pixbuf('toggler-gfx/visible.png', widget_size)
